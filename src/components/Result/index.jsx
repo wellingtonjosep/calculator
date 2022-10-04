@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CalculatorContext } from "../../Providers/calculator";
+import { CalculatorContext } from "../../providers/calculator";
 
 import "./styles.css";
 

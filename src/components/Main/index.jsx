@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import "./styles.css";
 import { useContext } from "react";
-import { CalculatorContext } from "../../Providers/calculator";
+import { CalculatorContext } from "../../providers/calculator";
 import Result from "../Result";
 
 function Main() {

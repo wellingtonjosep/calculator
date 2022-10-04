@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { CalculatorProviders } from "./Providers/calculator";
+import { CalculatorProviders } from "./providers/calculator";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
