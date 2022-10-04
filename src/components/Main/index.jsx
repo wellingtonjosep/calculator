@@ -3,8 +3,14 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import "./styles.css";
+import { useContext } from "react";
+import { CalculatorContext } from "../../Providers/calculator";
+import Result from "../Result";
 
 function Main() {
+
+  const { calculator } = useContext(CalculatorContext)
+
   const schema = yup.object().shape({
     amount: yup
       .number()
@@ -22,7 +28,7 @@ function Main() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmitFunction = (data) => {
-    console.log(data)
+    calculator(data)
   };
   return (
     <section className="main">
@@ -54,29 +60,7 @@ function Main() {
           Calcular
         </button>
       </form>
-      <section className="main-result">
-        <h2 className="title-result">VOCÊ RECEBERÁ:</h2>
-        <p className="result-p">
-          Amanhâ:<span className="span-result">
-            
-          </span>
-        </p>
-        <p className="result-p">
-          Em 15 dias:<span className="span-result">
-
-          </span>
-        </p>
-        <p className="result-p">
-          Em 30 dias:<span className="span-result">
-
-          </span>
-        </p>
-        <p className="result-p">
-          Em 90 dias:<span className="span-result">
-
-          </span>
-        </p>
-      </section>
+      <Result/>
     </section>
   );
 }

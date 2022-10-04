@@ -11,6 +11,7 @@ input[type="number"] {
     border: 2px solid rgb(221, 221, 221);
     border-radius: 3px;
     display: flex;
+    flex-direction: column;
     padding-top: 15px;
     padding-bottom: 35px;
     }
@@ -83,6 +84,7 @@ input[type="number"] {
             font-weight: bold;
             font-family: Arial, Helvetica;
             background-color: rgb(212, 210, 210);
+            margin-top: 12px;
         }
 
         .button-main:hover {
@@ -100,38 +102,10 @@ input[type="number"] {
             font-size: 12px;
             text-align: left;
         }
-    
-    .main-result {
-        margin-left: 50px;
-        margin-top: 50px;
-        margin-right: 50px;
-        }
 
-        .title-result {
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            border-bottom: 1px solid #8ab1e0;
-            width: 250px;
-            text-align: left;
-            padding-bottom: 8px;
-            color: #628fc8;
-        }
-
-        .result-p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            text-align: left;
-            color: #75abee;
-        }
-
-        .span-result {
-            color: #628fc8;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-@media (max-width:768px) {
+@media (min-width:768px) {
     .main {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         }
 }

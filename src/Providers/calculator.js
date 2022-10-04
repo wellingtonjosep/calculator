@@ -5,11 +5,10 @@ import { toast } from "react-toastify";
 export const CalculatorContext = createContext([]);
 
 export const CalculatorProviders = ({ children }) => {
-  const loading = toast.loading("Carregando...");
-
   const [result, isResult] = useState({});
 
   async function calculator(data) {
+    const loading = toast.loading("Carregando...");
     axios
       .post("https://frontend-challenge-7bu3nxh76a-uc.a.run.app", data)
       .then((res) => {
@@ -20,6 +19,7 @@ export const CalculatorProviders = ({ children }) => {
           type: "success",
           isLoading: false,
         });
+        isResult(res.data)
       })
       .catch((err) => {
         console.log(err);
