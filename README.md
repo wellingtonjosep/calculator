@@ -3,7 +3,7 @@
 > ### Projeto criado em outubro de 2022 na escola de programação Kenzie Academy Brasil.
 ----------
 > ### Versel https://calculator-iota-sand.vercel.app/
-----------
+---------
 ## Raciocínio
 >### 1. Verifiquei o layout para saber como deveria progredir com o projeto.
 >### 2. Não achei necessario em criar um global css já que a aplicação é pequena.
